@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pe.oranch.restaurantroky.activities.PrincipalActivity"
+    android:background="@color/colorFondo"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+        //TITULO SUPERIOR Y BOTON
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/relLayoutTop"
+            android:layout_alignParentTop="true">
+            //TITULO SUPERIOR Y BOTON
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/relLayoutTop2"
+                android:background="#FFFFFF"
+                android:layout_alignParentTop="true">
+                //MARGEN SUPERIOR
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:id="@+id/relLayoutBordeSuperior">
+                </RelativeLayout>
+                //FIN MARGEN SUPERIOR
+                //MARGEN IZQ
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferior"
+                    android:id="@+id/relLayoutIzq">
+                </RelativeLayout>
+                //FIN MARGEN IZQ
+                //CONTENIDO SUPERIOR
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeSuperior"
+                    android:layout_toRightOf="@+id/relLayoutIzq"
+                    android:layout_toLeftOf="@+id/relLayoutDer"
+                    android:id="@+id/relLayoutContenidoSuperior">
+                    <RelativeLayout
+                        android:id="@+id/botonVolver"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/activityTitulo"
+                        >
+                        <ImageView
+                            android:id="@+id/arrowLeft"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/ic_arrow_left"
+                            />
+                        <TextView
+                            android:id="@+id/activityVolver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:text="@string/btn_volver"
+                            android:layout_centerVertical="true"
+                            android:textAlignment="center"
+                            android:layout_toRightOf="@+id/arrowLeft"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMinTextSize="15sp"
+                            android:autoSizeMaxTextSize="50sp"
+                            android:textSize="15sp"
+                            android:autoSizeStepGranularity="1sp"/>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/activityTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/comentarios"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="20sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:textSize="25sp"
+                        android:autoSizeStepGranularity="1sp"/>
+                </RelativeLayout>
+                //FIN CONTENIDO SUPERIOR
+
+                //MARGEN DERECHO
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferior"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relLayoutDer">
+
+
+                </RelativeLayout>
+                //FIN MARGEN DERECHO
+            </RelativeLayout>
+            //FIN TITULO SUPERIOR Y BOTON
+        </RelativeLayout>
+        //FIN TITULO SUPERIOR Y BOTON
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/relLayoutMedio"
+            android:layout_below="@+id/relLayoutTop"
+            android:layout_above="@+id/relLayoutBot"
+            android:background="@color/colorBlanco">
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.1"
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/idRecyclerComentarios"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"/>
+            </ScrollView>
+            <LinearLayout
+                android:layout_weight="0.7"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/Btn_Eliminar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/boton_plomo"
+                        android:textAllCaps="false"
+                        android:text="Eliminar"
+                        android:layout_margin="10dp"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+                    <Button
+
+                        android:layout_margin="10dp"
+                        android:id="@+id/Btn_Aprobar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/boton_menu"
+                        android:textAllCaps="false"
+                        android:text="Aprobar"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/relLayoutBot"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
+                android:background="@drawable/plomo_border_top"
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@drawable/bottom_nav_colors"
+                app:itemTextColor="@drawable/bottom_nav_colors">
+
+            </android.support.design.widget.BottomNavigationView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

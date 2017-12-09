@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_login"
+
+    tools:context="pe.oranch.restaurantroky.activities.PrincipalActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIA SESIÓN"
+        android:textColor="#f5a623"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        />
+
+        <EditText
+            android:id="@+id/Tv_usuario"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Usuario"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:inputType="text"
+            />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        app:passwordToggleTint = "#FFFFFF"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/Tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Me olvidé la contraseña"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/Btn_iniciar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/boton_logueo"
+        android:text="INGRESAR"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Aun no eres cliente?"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/tvregistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate aquí"
+        android:textColor="#f5a623"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

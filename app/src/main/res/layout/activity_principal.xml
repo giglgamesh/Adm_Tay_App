@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pe.oranch.restaurantroky.activities.PrincipalActivity"
+    android:background="@color/colorFondo"
+    >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/relLayoutBordeSuperior">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutBordeSuperior"
+            android:layout_above="@+id/relLayoutBordeInferior"
+            android:id="@+id/relLayoutIzq">
+
+        </RelativeLayout>
+
+        // INICIO CUADRO CENTRAL
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayoutSuperior"
+            android:layout_below="@+id/relLayoutBordeSuperior"
+            android:layout_above="@+id/relLayoutBordeInferior"
+            android:layout_toRightOf="@+id/relLayoutIzq"
+            android:layout_toLeftOf="@+id/relLayoutDer">
+            // MENU SUPERIOR IZQUIERDO
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlanco"
+                android:id="@+id/relLayoutMenuIzq"
+                android:layout_toLeftOf="@+id/relLayoutCentro"
+                android:layout_above="@+id/relLayoutCentro2">
+                // BORDE SUPERIOR E IZQUIERDO
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeMenuIzqSuperior">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutBordeMenuIzqInferior"
+                    android:id="@+id/relLayoutMenuIzqIzq">
+
+                </RelativeLayout>
+                // FIN BORDE SUPERIOR E IZQUIERDO
+                // IMAGEN
+                <ImageView
+                    android:id="@+id/imageViewMenuIzq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/relLayoutBordeMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutTextoMenuIzq"
+                    android:layout_toRightOf="@+id/relLayoutMenuIzqIzq"
+                    android:layout_toLeftOf="@+id/relLayoutMenuIzqDer"
+                    android:src="@drawable/ic_ruta"
+                    />
+                // FIN IMAGEN
+                // LAYOUT DE TEXTO
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:id="@+id/relLayoutTextoMenuIzq"
+                    android:layout_above="@+id/relLayoutBordeMenuIzqInferior">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personas cerca:"
+                        android:textColor="#989898"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/textoPersonasCerca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200 personas"
+                        android:textColor="#f5a623"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                // FIN LAYOUT DE TEXTO
+                // BORDE DERECHO E INFERIOR
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutBordeMenuIzqInferior"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relLayoutMenuIzqDer">
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeMenuIzqInferior"
+                    android:layout_alignParentBottom="true">
+                </RelativeLayout>
+                // FIN BORDE DERECHO E INFERIOR
+            </RelativeLayout>
+            // FIN MENU SUPERIOR IZQUIERDO
+            // MENU SUPERIOR DERECHO
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlanco"
+                android:id="@+id/relLayoutMenuDer"
+                android:layout_toRightOf="@+id/relLayoutCentro"
+                android:layout_above="@+id/relLayoutCentro2">
+                // BORDE SUPERIOR E IZQUIERDO
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeMenuDerSuperior">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutBordeMenuDerInferior"
+                    android:id="@+id/relLayoutMenuDerIzq">
+
+                </RelativeLayout>
+                // FIN BORDE SUPERIOR E IZQUIERDO
+                // IMAGEN
+                <ImageView
+                    android:id="@+id/imageViewMenuDer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/relLayoutBordeMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutTextoMenuDer"
+                    android:layout_toRightOf="@+id/relLayoutMenuDerIzq"
+                    android:layout_toLeftOf="@+id/relLayoutMenuDerDer"
+                    android:src="@drawable/ic_estadistica"
+                    />
+                // FIN IMAGEN
+                // LAYOUT DE TEXTO
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:id="@+id/relLayoutTextoMenuDer"
+                    android:layout_above="@+id/relLayoutBordeMenuDerInferior">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visitas:"
+                        android:textColor="#989898"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25 visitas"
+                        android:textColor="#f5a623"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                // FIN LAYOUT DE TEXTO
+                // BORDE DERECHO E INFERIOR
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutBordeMenuDerInferior"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relLayoutMenuDerDer">
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeMenuDerInferior"
+                    android:layout_alignParentBottom="true">
+                </RelativeLayout>
+                // FIN BORDE DERECHO E INFERIOR
+            </RelativeLayout>
+            // FIN MENU SUPERIOR DERECHO
+            // SEPARADOR CENTRAL
+            <RelativeLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorFondo"
+                android:id="@+id/relLayoutCentro"
+                android:layout_centerInParent="true">
+
+            </RelativeLayout>
+            // SEPARADOR CENTRAL 2
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/colorFondo"
+                android:id="@+id/relLayoutCentro2"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true">
+
+            </RelativeLayout>
+            // MENU INFERIOR IZQUIERDO
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlanco"
+                android:id="@+id/relLayoutInferiorMenuIzq"
+                android:layout_toLeftOf="@+id/relLayoutCentro"
+                android:layout_below="@+id/relLayoutCentro2">
+                // BORDE SUPERIOR E IZQUIERDO
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeInferiorMenuIzqSuperior">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuIzqInferior"
+                    android:id="@+id/relLayoutInferiorMenuIzqIzq">
+
+                </RelativeLayout>
+                // FIN BORDE SUPERIOR E IZQUIERDO
+                // IMAGEN
+                <ImageView
+                    android:id="@+id/imageViewInferiorMenuIzq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutTextoInferiorMenuIzq"
+                    android:layout_toRightOf="@+id/relLayoutInferiorMenuIzqIzq"
+                    android:layout_toLeftOf="@+id/relLayoutInferiorMenuIzqDer"
+                    android:src="@drawable/ic_comentario"
+                    />
+                // FIN IMAGEN
+                // LAYOUT DE TEXTO
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:id="@+id/relLayoutTextoInferiorMenuIzq"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuIzqInferior">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comentarios:"
+                        android:textColor="#989898"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/textoCantidadComentarios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150 comentarios"
+                        android:textColor="#f5a623"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                // FIN LAYOUT DE TEXTO
+                // BORDE DERECHO E INFERIOR
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuIzqSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuIzqInferior"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relLayoutInferiorMenuIzqDer">
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeInferiorMenuIzqInferior"
+                    android:layout_alignParentBottom="true">
+                </RelativeLayout>
+                // FIN BORDE DERECHO E INFERIOR
+            </RelativeLayout>
+            // FIN MENU INFERIOR IZQUIERDO
+            // MENU INFERIOR DERECHO
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlanco"
+                android:id="@+id/relLayoutInferiorMenuDer"
+                android:layout_toRightOf="@+id/relLayoutCentro"
+                android:layout_below="@+id/relLayoutCentro2">
+                // BORDE SUPERIOR E IZQUIERDO
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeInferiorMenuDerSuperior">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuDerInferior"
+                    android:id="@+id/relLayoutInferiorMenuDerIzq">
+
+                </RelativeLayout>
+                // FIN BORDE SUPERIOR E IZQUIERDO
+                // IMAGEN
+                <ImageView
+                    android:id="@+id/imageViewInferiorMenuDer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutTextoInferiorMenuDer"
+                    android:layout_toRightOf="@+id/relLayoutInferiorMenuDerIzq"
+                    android:layout_toLeftOf="@+id/relLayoutInferiorMenuDerDer"
+                    android:src="@drawable/ic_star"
+                    />
+                // FIN IMAGEN
+                // LAYOUT DE TEXTO
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:id="@+id/relLayoutTextoInferiorMenuDer"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuDerInferior">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calificaciones:"
+                        android:textColor="#989898"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/textoCantidadCalificaciones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120 calificaciones"
+                        android:textColor="#f5a623"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="1sp"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                // FIN LAYOUT DE TEXTO
+                // BORDE DERECHO E INFERIOR
+                <RelativeLayout
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayoutBordeInferiorMenuDerSuperior"
+                    android:layout_above="@+id/relLayoutBordeInferiorMenuDerInferior"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relLayoutInferiorMenuDerDer">
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relLayoutBordeInferiorMenuDerInferior"
+                    android:layout_alignParentBottom="true">
+                </RelativeLayout>
+                // FIN BORDE DERECHO E INFERIOR
+            </RelativeLayout>
+            // FIN MENU INFERIOR DERECHO
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayoutBordeSuperior"
+            android:layout_above="@+id/relLayoutBordeInferior"
+            android:layout_alignParentRight="true"
+            android:id="@+id/relLayoutDer">
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/relLayoutBordeInferior"
+            android:layout_above="@+id/relLayoutBot">
+        </RelativeLayout>
+        // MENU DE ACCION INFERIOR
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/relLayoutBot"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
+                android:background="@drawable/plomo_border_top"
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@drawable/bottom_nav_colors"
+                app:itemTextColor="@drawable/bottom_nav_colors">
+
+            </android.support.design.widget.BottomNavigationView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

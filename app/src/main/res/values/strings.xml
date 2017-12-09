@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Taypapp</string>
+    <string name="btn_volver">Volver</string>
+    <string name="personas_cerca">Personas Cerca</string>
+    <string name="calificaciones">Calificaciones</string>
+    <string name="perfil">Perfil</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="visitas">Visitas</string>
+    <string name="subir_carta">Subir Carta</string>
+    <string name="subir_menu">Subir Menu</string>
+    <string name="subir_oferta">Subir Oferta</string>
+    <string name="json_estatus_success">Exitoso</string>
+    <string name="usuario_mensaje_validacion">Por Favor coloque un usuario...</string>
+    <string name="password_mensaje_validacion">Por Favor coloque una clave...</string>
+    <string name="login">Login</string>
+    <string name="login_fail">Logueo sin exito. Porfavor intentelo denuevo.</string>
+    <string name="OK">OK</string>
+    <string name="sorry_title">Disculpe las molestias</string>
+    <string name="device_offline">Tu dispositivo esta desconectado.</string>
+    <string name="video_button">Video Record Button</string>
+    <string name="camera_button">Camera Capture Button</string>
+    <string name="camera_not_found">No camera harware found</string>
+    <string name="take_photo_help">Touch anywhere on screen to take picture</string>
+    <string name="seleccionar">Seleccione uno:</string>
+    <string-array name="shopping_item">
+        <item>Onion</item>
+        <item>Sausage</item>
+        <item>Milk</item>
+        <item>Garlic</item>
+        <item>Beef</item>
+        <item>Veggies</item>
+        <item>Olive</item>
+        <item>Cheese</item>
+        <item>Tuna</item>
+        <item>Mushrooms</item>
+    </string-array>
+</resources>

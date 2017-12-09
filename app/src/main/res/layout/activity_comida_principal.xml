@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pe.oranch.restaurantroky.activities.PrincipalActivity"
+    android:background="@color/colorFondo"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout">
+        <RelativeLayout
+            android:background="@drawable/fondo_menu_comida"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayoutMedio"
+            android:layout_above="@+id/relLayoutBot">
+            <RelativeLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:id="@+id/relLayoutPrincipalCentralIzq">
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/relLayoutPrincipalCentralIzq"
+                android:layout_toLeftOf="@+id/relLayoutPrincipalCentralDer"
+                android:layout_above="@+id/relLayoutCentro2"
+                android:id="@+id/relLayoutPrincipalBotonArriba">
+                <Button
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/Btn_subir_menu_texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/boton_menu"
+                    android:textAllCaps="false"
+                    android:text="Subir Texto"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/relLayoutCentro2"
+                android:layout_toRightOf="@+id/relLayoutPrincipalCentralIzq"
+                android:layout_toLeftOf="@+id/relLayoutPrincipalCentralDer"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/relLayoutPrincipalCentralIzq"
+                android:layout_toLeftOf="@+id/relLayoutPrincipalCentralDer"
+                android:layout_below="@+id/relLayoutCentro2"
+                android:id="@+id/relLayoutPrincipalBotonAbajo">
+                <Button
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/Btn_subir_menu_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/boton_menu"
+                    android:textAllCaps="false"
+                    android:text="Subir Foto"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:id="@+id/relLayoutPrincipalCentralDer">
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/relLayoutBot"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavView_Bar"
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@drawable/bottom_nav_colors"
+                app:itemTextColor="@drawable/bottom_nav_colors">
+
+            </android.support.design.widget.BottomNavigationView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
