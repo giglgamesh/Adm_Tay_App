@@ -18,7 +18,7 @@ public class ListarComidasRequest extends StringRequest {
     public ListarComidasRequest(int empresa, Response.Listener<String> listener){
         super(Method.POST, LISTA_COMIDAS_REQUEST_URL,listener,null);
         params = new HashMap<>();
-        params.put ("tay_empresa_id",empresa+"");
+        params.put ("tay_tipocomida_estado",empresa+"");
     }
 
     @Override

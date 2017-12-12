@@ -526,10 +526,9 @@ public class PerfilActivity extends AppCompatActivity{
                                 JSONObject jsonObject=null;
                                 jsonObject=json.getJSONObject(i);
 
-                                tay_comida.setTay_asoc_tipc_id(Integer.parseInt(jsonObject.optString("tay_asoc_tipc_id")));
-                                tay_comida.setTay_tipocomida_nombre(jsonObject.optString("tay_tipocomida_nombre"));
-                                tay_comida.setTay_asoc_estado(Integer.parseInt(jsonObject.optString("tay_asoc_estado")));
                                 tay_comida.setTay_tipocomida_id(Integer.parseInt(jsonObject.optString("tay_tipocomida_id")));
+                                tay_comida.setTay_tipocomida_nombre(jsonObject.optString("tay_tipocomida_nombre"));
+                                tay_comida.setTay_tipocomida_estado(Integer.parseInt(jsonObject.optString("tay_tipocomida_estado")));
                                 tay_comida.setSelected(false);
                                 listaComidas.add(tay_comida);
                             }

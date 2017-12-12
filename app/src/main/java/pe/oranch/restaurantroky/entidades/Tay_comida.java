@@ -8,7 +8,7 @@ public class Tay_comida {
     private Integer tay_tipocomida_id;
     private Integer tay_asoc_tipc_id;
     private String tay_tipocomida_nombre;
-    private Integer tay_asoc_estado;
+    private Integer tay_tipocomida_estado;
     private boolean selected;
 
     public Integer getTay_tipocomida_id() {
@@ -35,12 +35,12 @@ public class Tay_comida {
         this.tay_tipocomida_nombre = tay_tipocomida_nombre;
     }
 
-    public Integer getTay_asoc_estado() {
-        return tay_asoc_estado;
+    public Integer getTay_tipocomida_estado() {
+        return tay_tipocomida_estado;
     }
 
-    public void setTay_asoc_estado(Integer tay_asoc_estado) {
-        this.tay_asoc_estado = tay_asoc_estado;
+    public void setTay_tipocomida_estado(Integer tay_tipocomida_estado) {
+        this.tay_tipocomida_estado = tay_tipocomida_estado;
     }
 
     public boolean isSelected() {
